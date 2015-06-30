@@ -1,5 +1,18 @@
 apply plugin: 'com.android.application'
 
+//add repository
+buildscript {
+    repositories {
+
+        jcenter()
+    }
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
@@ -17,9 +30,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    //These files brake things. Need to be excluded.
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
+    //Screens dependency
+    compile 'com.liferay.mobile:liferay-screens:0.3.0'
 }
