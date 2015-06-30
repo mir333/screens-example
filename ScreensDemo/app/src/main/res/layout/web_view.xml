@@ -12,6 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView2"
         android:layout_gravity="center"
-        liferay:articleId="111111"
+        liferay:articleId="@integer/liferay_web_content"
         liferay:layoutId="@layout/webcontentdisplay_default" />
 </LinearLayout>
