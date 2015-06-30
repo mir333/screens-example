@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">ScreensDemo</string>
+    <string name="app_name">Screens LUGUK Demo</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 </resources>
